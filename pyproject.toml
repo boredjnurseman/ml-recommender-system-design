@@ -1,16 +1,26 @@
 [build-system]
-requires = ["setuptools>=65"]
+requires = ["setuptools>=75", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ml-recommender-system-design"
 version = "0.1.0"
 description = "A thin ML systems demonstrator for a film recommendation serving pipeline."
+readme = "README.md"
 requires-python = ">=3.11"
+license = { file = "LICENSE" }
 dependencies = [
-    "PyYAML",
-    ]
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
-dev = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

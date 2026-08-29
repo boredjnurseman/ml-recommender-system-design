@@ -5,3 +5,15 @@ __pycache__/
 .DS_Store
 .idea/
 *.egg-info/
+build/
+dist/
+
+# Local worktrees and agent-only material
+.worktrees/
+.superpowers/
+.agents/
+.codex/
+.claude/
+docs/superpowers/
+AGENTS.md
+CLAUDE.md
