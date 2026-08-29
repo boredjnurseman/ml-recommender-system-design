@@ -7,7 +7,10 @@ name = "ml-recommender-system-design"
 version = "0.1.0"
 description = "A thin ML systems demonstrator for a film recommendation serving pipeline."
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "PyYAML",
+    ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+dev = ["pytest"]
